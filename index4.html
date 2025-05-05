@@ -22,7 +22,15 @@
       ];
 
        const userList= document.getElementById("userList");
-        for(let i=0; i < users.length; i++)
+        for(let i=0; i < users.length; i++) {
+          const user = users[i];
+
+      if (user.age >= 18) {
+        const li = document.createElement("li");
+        li.textContent = ${user.name} - ${user.age} سال;
+        userList.appendChild(li);
+      }
+    }
 
 
 
